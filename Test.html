@@ -1,0 +1,46 @@
+for l1 in message_trial:
+  if l1 not in symbols:
+    message_repeat_keyword += keyword[]
+  else:
+    message_repeat_keyword += l1
+print(message_repeat_keyword)
+
+for index in range(len(message_trial)):
+  if message_trial[index] not in symbols:
+    if index < len(keyword):
+      message_repeat_keyword += keyword[index]
+    else:
+      message_repeat_keyword += keyword[index % len(keyword)]
+  else:
+    message_repeat_keyword += message_trial[index]
+print(message_repeat_keyword)
+
+
+for index in range(len(message_trial)):
+  num_symbols = 0
+  if message_trial[index] not in symbols:
+    if index < len(keyword_trial):
+      message_repeat_keyword_trial += keyword_trial[index]
+    else:
+      message_repeat_keyword_trial += keyword_trial[index % len(keyword_trial)]
+  else:
+    message_repeat_keyword_trial += message_trial[index]
+print(message_repeat_keyword_trial)
+
+
+
+
+def vigenere_coder(message, keyword):
+  message_repeat_keyword = ""
+  for letter in message:
+    if letter in symbols:
+      message_repeat_keyword += letter
+  else:
+    for index in range(len(message)):
+      if index < len(keyword):
+        message_repeat_keyword += keyword[index]
+      else:
+        message_repeat_keyword += keyword[index % len(keyword)]
+  return message_repeat_keyword
+
+print(vigenere_coder(message_trial, keyword_trial))
