@@ -99,6 +99,7 @@ def count_affected_areas(dict):
     return new_dict
 counting_affected_areas = count_affected_areas(hurricane_dictionary)
 print(counting_affected_areas)
+print()
 
 # write your find most affected area function here:
 def most_affected(dict):
@@ -151,7 +152,7 @@ def greatest_damage(dict):
         if hurricane[1]['Damage'] > greatest_damage:
             greatest_damage = hurricane[1]['Damage']
             greatest_damage_hurricane = hurricane[0]
-    return f'The most damage caused by a hurricane is {greatest_damage} by the hurricane {greatest_damage_hurricane}.'
+    return f'The most damage caused by a hurricane is ${greatest_damage} dollars by the hurricane {greatest_damage_hurricane}.'
 print(greatest_damage(hurricane_dictionary))
 print()
 
